@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrencyLineChartTableViewCell" rowHeight="281" id="KGk-i7-Jjw" customClass="CurrencyLineChartTableViewCell" customModule="BitTracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="281"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="281"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jGR-6d-8G6">
+                        <rect key="frame" x="60" y="36" width="200" height="32"/>
+                        <segments>
+                            <segment title="Неделя"/>
+                            <segment title="Месяц"/>
+                            <segment title="Год"/>
+                        </segments>
+                        <connections>
+                            <action selector="segmentControllerChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="jOC-VA-lsh"/>
+                        </connections>
+                    </segmentedControl>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sjf-te-mCn" customClass="LineChart" customModule="BitTracker" customModuleProvider="target">
+                        <rect key="frame" x="8" y="123" width="304" height="152"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Sjf-te-mCn" secondAttribute="height" multiplier="1:0.5" id="HTh-vH-63e"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l53-Re-KO3">
+                        <rect key="frame" x="16" y="75" width="288" height="36"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UOv-cl-aAz">
+                                <rect key="frame" x="88.5" y="8" width="111.5" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="xy8-iw-xYA">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="eHp-jK-SYN">
+                                        <rect key="frame" x="52" y="0.0" width="5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="fP6-y1-lMQ">
+                                        <rect key="frame" x="65" y="0.0" width="46.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UOv-cl-aAz" firstAttribute="centerY" secondItem="l53-Re-KO3" secondAttribute="centerY" id="7ed-PM-eGB"/>
+                            <constraint firstItem="UOv-cl-aAz" firstAttribute="centerX" secondItem="l53-Re-KO3" secondAttribute="centerX" id="L9h-JJ-lKf"/>
+                            <constraint firstAttribute="height" constant="36" id="LuM-iX-sbS"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UOv-cl-aAz" secondAttribute="trailing" id="fb7-df-h01"/>
+                            <constraint firstItem="UOv-cl-aAz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="l53-Re-KO3" secondAttribute="leading" id="vQQ-bc-cJJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jGR-6d-8G6" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="B8g-XQ-zlW"/>
+                    <constraint firstAttribute="trailing" secondItem="Sjf-te-mCn" secondAttribute="trailing" constant="8" id="BYr-yF-fwD"/>
+                    <constraint firstItem="Sjf-te-mCn" firstAttribute="top" secondItem="l53-Re-KO3" secondAttribute="bottom" constant="12" id="Gv4-UB-K09"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="l53-Re-KO3" secondAttribute="trailing" id="IVg-I9-dtU"/>
+                    <constraint firstItem="jGR-6d-8G6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="36" id="W0X-GN-C62"/>
+                    <constraint firstItem="l53-Re-KO3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ipc-5F-7Ab"/>
+                    <constraint firstItem="Sjf-te-mCn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="mei-Aj-N4q"/>
+                    <constraint firstItem="l53-Re-KO3" firstAttribute="top" secondItem="jGR-6d-8G6" secondAttribute="bottom" constant="8" id="un0-aj-Zug"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="currencyLabel" destination="fP6-y1-lMQ" id="vqj-xM-nPu"/>
+                <outlet property="dateLabel" destination="xy8-iw-xYA" id="yYU-oJ-1DP"/>
+                <outlet property="infoView" destination="l53-Re-KO3" id="ASo-h2-9Cj"/>
+                <outlet property="lineChartView" destination="Sjf-te-mCn" id="mSO-cS-eIS"/>
+                <outlet property="segmentController" destination="jGR-6d-8G6" id="Zxf-TT-iey"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="167.07589285714286"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q8p-hu-V2W">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Главная-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="BitTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qN5-fp-Lce">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qN5-fp-Lce" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KWv-GB-Ec4"/>
+                            <constraint firstItem="qN5-fp-Lce" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="l0G-My-Ekt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qN5-fp-Lce" secondAttribute="trailing" id="pL4-iq-e7w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qN5-fp-Lce" secondAttribute="bottom" id="yKB-Xl-Q6G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Главная" image="Group-2" selectedImage="Group-2" id="7jB-hi-QIl"/>
+                    <connections>
+                        <outlet property="tableView" destination="qN5-fp-Lce" id="R17-E7-QAz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1283" y="-404"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9WC-AB-7OY">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Q8p-hu-V2W" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qvk-o7-q3x">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6WV-zf-roN"/>
+                        <segue destination="gpg-DN-V4j" kind="relationship" relationship="viewControllers" id="c80-n3-VOb"/>
+                        <segue destination="12q-oH-bCI" kind="relationship" relationship="viewControllers" id="Tst-qH-dBX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNb-pO-rLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+        </scene>
+        <!--Транзакций-->
+        <scene sceneID="iTu-dO-VfE">
+            <objects>
+                <viewController storyboardIdentifier="TransactionViewController" id="gpg-DN-V4j" customClass="TransactionViewController" customModule="BitTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Inh-82-Kpv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m7u-Yf-bQ3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="m7u-Yf-bQ3" firstAttribute="leading" secondItem="hEI-gx-b3p" secondAttribute="leading" id="dXN-Uy-ewK"/>
+                            <constraint firstItem="m7u-Yf-bQ3" firstAttribute="top" secondItem="hEI-gx-b3p" secondAttribute="top" id="hQX-gQ-qZk"/>
+                            <constraint firstItem="hEI-gx-b3p" firstAttribute="trailing" secondItem="m7u-Yf-bQ3" secondAttribute="trailing" id="wPI-3L-Q1Y"/>
+                            <constraint firstItem="hEI-gx-b3p" firstAttribute="bottom" secondItem="m7u-Yf-bQ3" secondAttribute="bottom" id="x3S-KT-xqy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hEI-gx-b3p"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Транзакций" image="cab-rating-selected" id="sob-oV-qBW"/>
+                    <connections>
+                        <outlet property="tableView" destination="m7u-Yf-bQ3" id="XDh-v6-NRw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bua-wa-tr3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1297" y="246"/>
+        </scene>
+        <!--Transaction Describe View Controller-->
+        <scene sceneID="9x7-zg-gXJ">
+            <objects>
+                <viewController storyboardIdentifier="TransactionDescribeViewController" id="vmO-TC-wSD" customClass="TransactionDescribeViewController" customModule="BitTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AX0-ab-VUf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Wx-xV-fYM">
+                                <rect key="frame" x="40" y="323" width="334" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ПОКУПКА" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOu-dQ-tTK">
+                                        <rect key="frame" x="124.5" y="12" width="85" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pn8-BN-ly7">
+                                        <rect key="frame" x="156" y="43.5" width="22.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uoa-6h-74t">
+                                        <rect key="frame" x="8" y="114.5" width="100" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сумма:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uy-6P-pYW">
+                                        <rect key="frame" x="8" y="150" width="58.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Курс транзакциий:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRp-kM-0hv">
+                                        <rect key="frame" x="91" y="185.5" width="152.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.4334334" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3c-41-d8f">
+                                        <rect key="frame" x="120" y="114.5" width="83.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Bitcoin-BTC-icon" translatesAutoresizingMaskIntoConstraints="NO" id="tzU-Wu-Wtb">
+                                        <rect key="frame" x="214" y="82" width="20" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Q7k-rk-9wB"/>
+                                            <constraint firstAttribute="width" constant="20" id="Xx6-g7-4W2"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YY7-nF-yUc">
+                                        <rect key="frame" x="78.5" y="150" width="43" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUl-D2-hPS">
+                                        <rect key="frame" x="125.5" y="150" width="35" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b2p-sy-oER">
+                                        <rect key="frame" x="46" y="221" width="242" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiH-kW-Cfn">
+                                                <rect key="frame" x="0.0" y="0.0" width="10" height="24"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bitcoin-BTC-icon" translatesAutoresizingMaskIntoConstraints="NO" id="YPG-Sw-CEz">
+                                                <rect key="frame" x="20" y="0.0" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="F4u-Vw-Gib"/>
+                                                    <constraint firstAttribute="width" constant="24" id="qm2-Bm-59j"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=  0000000000.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJK-9k-tf4">
+                                                <rect key="frame" x="54" y="0.0" width="143" height="24"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WB-fa-kqF">
+                                                <rect key="frame" x="207" y="0.0" width="35" height="24"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019-09-05, 12:34:45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usi-jg-Dau">
+                                        <rect key="frame" x="83.5" y="75" width="167.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="YY7-nF-yUc" firstAttribute="leading" secondItem="9uy-6P-pYW" secondAttribute="trailing" constant="12" id="0pi-rl-VSP"/>
+                                    <constraint firstItem="WRp-kM-0hv" firstAttribute="centerX" secondItem="8Wx-xV-fYM" secondAttribute="centerX" id="6CW-Ih-Wdr"/>
+                                    <constraint firstItem="9uy-6P-pYW" firstAttribute="top" secondItem="Uoa-6h-74t" secondAttribute="bottom" constant="12" id="FPF-n2-8pD"/>
+                                    <constraint firstItem="pn8-BN-ly7" firstAttribute="centerX" secondItem="8Wx-xV-fYM" secondAttribute="centerX" id="H8E-wI-gmO"/>
+                                    <constraint firstItem="Uoa-6h-74t" firstAttribute="leading" secondItem="8Wx-xV-fYM" secondAttribute="leading" constant="8" id="HL8-5y-uG0"/>
+                                    <constraint firstAttribute="height" constant="250" id="KlR-CO-8Ed"/>
+                                    <constraint firstItem="Uoa-6h-74t" firstAttribute="top" secondItem="Usi-jg-Dau" secondAttribute="bottom" constant="16" id="O34-Ev-vJg"/>
+                                    <constraint firstItem="Usi-jg-Dau" firstAttribute="centerX" secondItem="8Wx-xV-fYM" secondAttribute="centerX" id="Xkr-cY-HeG"/>
+                                    <constraint firstItem="tzU-Wu-Wtb" firstAttribute="centerY" secondItem="B3c-41-d8f" secondAttribute="centerY" id="Y2a-Cn-fAr"/>
+                                    <constraint firstItem="9uy-6P-pYW" firstAttribute="leading" secondItem="8Wx-xV-fYM" secondAttribute="leading" constant="8" id="YOC-zv-aHs"/>
+                                    <constraint firstItem="b2p-sy-oER" firstAttribute="centerX" secondItem="8Wx-xV-fYM" secondAttribute="centerX" id="Ybv-Ug-LGg"/>
+                                    <constraint firstItem="tzU-Wu-Wtb" firstAttribute="leading" secondItem="B3c-41-d8f" secondAttribute="trailing" constant="8" id="ZaC-WO-zyZ"/>
+                                    <constraint firstItem="Usi-jg-Dau" firstAttribute="top" secondItem="pn8-BN-ly7" secondAttribute="bottom" constant="8" id="b16-hM-RYt"/>
+                                    <constraint firstItem="pn8-BN-ly7" firstAttribute="top" secondItem="YOu-dQ-tTK" secondAttribute="bottom" constant="8" id="bfU-Tz-aM0"/>
+                                    <constraint firstItem="B3c-41-d8f" firstAttribute="centerY" secondItem="Uoa-6h-74t" secondAttribute="centerY" id="dwV-8b-tQL"/>
+                                    <constraint firstItem="YOu-dQ-tTK" firstAttribute="top" secondItem="8Wx-xV-fYM" secondAttribute="top" constant="12" id="gcm-fX-7ZJ"/>
+                                    <constraint firstItem="YOu-dQ-tTK" firstAttribute="centerX" secondItem="8Wx-xV-fYM" secondAttribute="centerX" id="gjc-eW-74M"/>
+                                    <constraint firstItem="EUl-D2-hPS" firstAttribute="leading" secondItem="YY7-nF-yUc" secondAttribute="trailing" constant="4" id="hdV-36-psW"/>
+                                    <constraint firstItem="WRp-kM-0hv" firstAttribute="top" secondItem="9uy-6P-pYW" secondAttribute="bottom" constant="12" id="klg-RW-MBv"/>
+                                    <constraint firstItem="YY7-nF-yUc" firstAttribute="centerY" secondItem="9uy-6P-pYW" secondAttribute="centerY" id="nYZ-7e-FTH"/>
+                                    <constraint firstItem="b2p-sy-oER" firstAttribute="top" secondItem="WRp-kM-0hv" secondAttribute="bottom" constant="12" id="pne-yy-Efx"/>
+                                    <constraint firstItem="B3c-41-d8f" firstAttribute="leading" secondItem="Uoa-6h-74t" secondAttribute="trailing" constant="12" id="vpM-Yy-621"/>
+                                    <constraint firstItem="EUl-D2-hPS" firstAttribute="centerY" secondItem="YY7-nF-yUc" secondAttribute="centerY" id="yGF-bF-7U5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8Wx-xV-fYM" firstAttribute="centerX" secondItem="AX0-ab-VUf" secondAttribute="centerX" id="0XD-oT-MXm"/>
+                            <constraint firstItem="8Wx-xV-fYM" firstAttribute="leading" secondItem="Uza-Ut-Da2" secondAttribute="leading" constant="40" id="Mu7-K7-1V7"/>
+                            <constraint firstItem="8Wx-xV-fYM" firstAttribute="centerY" secondItem="AX0-ab-VUf" secondAttribute="centerY" id="Ohw-Rv-P3O"/>
+                            <constraint firstItem="Uza-Ut-Da2" firstAttribute="trailing" secondItem="8Wx-xV-fYM" secondAttribute="trailing" constant="40" id="iai-Cm-8wZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uza-Ut-Da2"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="B3c-41-d8f" id="q9f-kJ-1A4"/>
+                        <outlet property="bottomView" destination="8Wx-xV-fYM" id="whS-zS-AHY"/>
+                        <outlet property="currencyLabel" destination="uJK-9k-tf4" id="aC5-WO-BwM"/>
+                        <outlet property="dateLabel" destination="Usi-jg-Dau" id="SeW-vc-1Ql"/>
+                        <outlet property="idLabel" destination="pn8-BN-ly7" id="hGZ-d4-zPZ"/>
+                        <outlet property="priceLabel" destination="YY7-nF-yUc" id="jIE-CF-vG4"/>
+                        <outlet property="typeLabel" destination="YOu-dQ-tTK" id="fte-9D-LgX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xf9-2B-zx3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2528.985507246377" y="215.625"/>
+        </scene>
+        <!--Конвертор-->
+        <scene sceneID="ALW-yO-9hn">
+            <objects>
+                <viewController storyboardIdentifier="ConvertorViewController" id="12q-oH-bCI" customClass="ConvertorViewController" customModule="BitTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8na-Jx-c04">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b9r-bN-T88">
+                                <rect key="frame" x="107" y="68" width="200" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="QbF-tb-07J"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="KZT"/>
+                                    <segment title="USD"/>
+                                    <segment title="EUR"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControllerChanged:" destination="12q-oH-bCI" eventType="valueChanged" id="EI2-lI-rjR"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwu-s8-RT5" customClass="TextField" customModule="BitTracker" customModuleProvider="target">
+                                <rect key="frame" x="127" y="123" width="160" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ccq-yp-eUo"/>
+                                    <constraint firstAttribute="width" constant="160" id="l6i-YY-Qkc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bitcoin-BTC-icon" translatesAutoresizingMaskIntoConstraints="NO" id="h6P-CH-q2J">
+                                <rect key="frame" x="299" y="126" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="aWf-34-wz8"/>
+                                    <constraint firstAttribute="width" constant="34" id="fHV-Td-JZQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVH-QJ-vj8">
+                                <rect key="frame" x="196.5" y="171" width="21" height="47"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O4y-dc-0PA" customClass="TextField" customModule="BitTracker" customModuleProvider="target">
+                                <rect key="frame" x="127" y="226" width="160" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="5fu-wd-UMv"/>
+                                    <constraint firstAttribute="height" constant="40" id="ltu-3x-NmY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KZT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16e-JH-aok">
+                                <rect key="frame" x="299" y="231.5" width="37.5" height="29"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gwu-s8-RT5" firstAttribute="centerX" secondItem="8na-Jx-c04" secondAttribute="centerX" id="AmC-ID-7cm"/>
+                            <constraint firstItem="b9r-bN-T88" firstAttribute="top" secondItem="dt6-id-mrv" secondAttribute="top" constant="24" id="BAj-lT-3DQ"/>
+                            <constraint firstItem="h6P-CH-q2J" firstAttribute="leading" secondItem="gwu-s8-RT5" secondAttribute="trailing" constant="12" id="Day-ou-CEa"/>
+                            <constraint firstItem="h6P-CH-q2J" firstAttribute="centerY" secondItem="gwu-s8-RT5" secondAttribute="centerY" id="Ezx-U9-pak"/>
+                            <constraint firstItem="oVH-QJ-vj8" firstAttribute="top" secondItem="gwu-s8-RT5" secondAttribute="bottom" constant="8" id="RNY-ZB-qDP"/>
+                            <constraint firstItem="oVH-QJ-vj8" firstAttribute="centerX" secondItem="8na-Jx-c04" secondAttribute="centerX" id="UXP-wW-Awq"/>
+                            <constraint firstItem="gwu-s8-RT5" firstAttribute="top" secondItem="b9r-bN-T88" secondAttribute="bottom" constant="24" id="VuD-s3-NF7"/>
+                            <constraint firstItem="O4y-dc-0PA" firstAttribute="centerX" secondItem="8na-Jx-c04" secondAttribute="centerX" id="XDh-ik-N5z"/>
+                            <constraint firstItem="b9r-bN-T88" firstAttribute="centerX" secondItem="8na-Jx-c04" secondAttribute="centerX" id="XPD-Jh-MdM"/>
+                            <constraint firstItem="16e-JH-aok" firstAttribute="centerY" secondItem="O4y-dc-0PA" secondAttribute="centerY" id="aj8-5p-uLV"/>
+                            <constraint firstItem="16e-JH-aok" firstAttribute="leading" secondItem="O4y-dc-0PA" secondAttribute="trailing" constant="12" id="d5Z-LF-Rfn"/>
+                            <constraint firstItem="O4y-dc-0PA" firstAttribute="top" secondItem="oVH-QJ-vj8" secondAttribute="bottom" constant="8" id="plh-9e-NGf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dt6-id-mrv"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Конвертор" image="convertor" id="vV2-Cl-8RW"/>
+                    <connections>
+                        <outlet property="bitCointTextField" destination="gwu-s8-RT5" id="Zod-mw-ltD"/>
+                        <outlet property="currencyLabel" destination="16e-JH-aok" id="9Cg-mR-7wY"/>
+                        <outlet property="currencyTextField" destination="O4y-dc-0PA" id="efX-E9-mfq"/>
+                        <outlet property="segmentController" destination="b9r-bN-T88" id="vA8-kD-DLI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dk8-Kj-vsJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1328.985507246377" y="934.82142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bitcoin-BTC-icon" width="1024" height="1024"/>
+        <image name="Group-2" width="27.5" height="24"/>
+        <image name="cab-rating-selected" width="30.5" height="25.5"/>
+        <image name="convertor" width="33" height="30.5"/>
+    </resources>
+</document>

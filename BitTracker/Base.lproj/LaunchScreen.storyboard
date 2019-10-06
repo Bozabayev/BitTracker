@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bitcoin-BTC-icon" translatesAutoresizingMaskIntoConstraints="NO" id="1Gg-8I-HiF">
+                                <rect key="frame" x="167" y="348" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Csq-O8-OIq"/>
+                                    <constraint firstAttribute="width" constant="80" id="PZE-Za-cUc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BitTracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OV3-UH-GvF">
+                                <rect key="frame" x="108.5" y="448" width="197.5" height="40"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered By" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5B-KI-iVn">
+                                <rect key="frame" x="44" y="687" width="226" height="40"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="coinDesk" translatesAutoresizingMaskIntoConstraints="NO" id="LMl-yQ-0JZ">
+                                <rect key="frame" x="60" y="767" width="295" height="49"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OV3-UH-GvF" firstAttribute="top" secondItem="1Gg-8I-HiF" secondAttribute="bottom" constant="20" id="6un-nE-HsY"/>
+                            <constraint firstItem="LMl-yQ-0JZ" firstAttribute="top" secondItem="p5B-KI-iVn" secondAttribute="bottom" constant="40" id="Dq9-fh-SDC"/>
+                            <constraint firstItem="1Gg-8I-HiF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-60" id="GED-Jz-IA8"/>
+                            <constraint firstItem="LMl-yQ-0JZ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GMM-Yu-MkZ"/>
+                            <constraint firstItem="p5B-KI-iVn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="Od2-1H-1NT"/>
+                            <constraint firstItem="1Gg-8I-HiF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="gbO-pG-wlw"/>
+                            <constraint firstItem="OV3-UH-GvF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="igF-5F-n7g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="p5B-KI-iVn" secondAttribute="bottom" constant="135" id="kb8-7X-hlt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bitcoin-BTC-icon" width="1024" height="1024"/>
+        <image name="coinDesk" width="221" height="49"/>
+    </resources>
+</document>
