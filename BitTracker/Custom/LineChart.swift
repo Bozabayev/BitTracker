@@ -27,7 +27,7 @@ class LineChart : UIView {
     private var yAxis = UIView()
     private var shapeLayer : CALayer?
     override func draw(_ rect: CGRect) {
-        self.clipsToBounds = true
+        self.clipsToBounds = false
         setupView()
         setupCoordinates()
     }
@@ -40,8 +40,8 @@ class LineChart : UIView {
             view.removeFromSuperview()
             }
         }
-        let height = Double(UIScreen.main.bounds.width - 16) / 2
-        let yCoordinate = height / highestCurrency * 0.65
+        let height = Double(self.frame.height)
+        let yCoordinate = height / highestCurrency * 0.8
         switch timeFilter {
         case .week:
             let xCoordinate = (UIScreen.main.bounds.width - 30) / 7
@@ -74,12 +74,13 @@ class LineChart : UIView {
         lineView.frame = CGRect(x: self.frame.width / 2 - 1, y: 0, width: 1, height: self.frame.height)
         lineView.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
         xAxis.frame = CGRect(x: 0, y: 0, width: 1, height: self.frame.height)
-        yAxis.frame = CGRect(x: 0, y: (UIScreen.main.bounds.width - 16) / 2 - 44, width: self.frame.width, height: 1)
+        yAxis.frame = CGRect(x: 0, y: self.bounds.maxY - 1, width: self.frame.width, height: 1)
         xAxis.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         yAxis.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         self.addSubview(xAxis)
         self.addSubview(yAxis)
         self.addSubview(lineView)
+        self.layoutIfNeeded()
         self.layoutSubviews()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(lineViewMoved(gesture:)))
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(lineViewMoved(gesture:)))

@@ -155,7 +155,7 @@ class MainViewController: UIViewController, TimeFilterChangedDelegate{
         case .month:
             for i in 1...4 {
                 for x in 1...7 {
-                    rate += reversedCurrencies[i*x - 1]
+                    rate += reversedCurrencies[7 * (i - 1) + x - 1]
                     if x == 1 || x == 7 {
                         date += x == 1 ? reversedDates[(i*x - 1)*7] : " -> \(reversedDates[i*x - 1])"
                     }
@@ -171,7 +171,7 @@ class MainViewController: UIViewController, TimeFilterChangedDelegate{
         case .year:
             for i in 1...12 {
                 for x in 1...30 {
-                    rate += reversedCurrencies[i*x - 1]
+                    rate += reversedCurrencies[30 * (i - 1) + x - 1]
                     if x == 1 || x == 30 {
                         date += x == 1 ? reversedDates[(i*x - 1)*30] : " -> \(reversedDates[i*x - 1])"
                     }
@@ -240,7 +240,7 @@ extension MainViewController : UITableViewDelegate , UITableViewDataSource {
         case 0:
             return 110
         case 1:
-            return 280
+            return 290
         default:
             return 0
         }
